@@ -1,0 +1,15 @@
+{
+  "testBWA.BWA_align.bwa_opt": "-M -t",
+  "testBWA.BWA_align.ref_fasta_pac": "/Users/louisecabansay/dockstore-training/data/ref/ref_hg37_chr20.fa.pac",
+  "testBWA.BWA_align.read1_fastq": "/Users/louisecabansay/dockstore-training/data/NA12878_chr20_ds_r1.fq",
+  "testBWA.BWA_align.docker_image": "quay.io/ldcabansay/voyages:latest",
+  "testBWA.BWA_align.threads": 16,
+  "testBWA.BWA_align.read2_fastq": "/Users/louisecabansay/dockstore-training/data/NA12878_chr20_ds_r2.fq",
+  "testBWA.BWA_align.ref_fasta": "/Users/louisecabansay/dockstore-training/data/ref/ref_hg37_chr20.fa",
+  "testBWA.BWA_align.ref_fasta_amb": "/Users/louisecabansay/dockstore-training/data/ref/ref_hg37_chr20.fa.amb",
+  "testBWA.BWA_align.ref_fasta_sa": "/Users/louisecabansay/dockstore-training/data/ref/ref_hg37_chr20.fa.sa",
+  "testBWA.BWA_align.output_sam": "test_align.sam",
+  "testBWA.BWA_align.ref_fasta_ann": "/Users/louisecabansay/dockstore-training/data/ref/ref_hg37_chr20.fa.ann",
+  "testBWA.BWA_align.ref_fasta_fai": "/Users/louisecabansay/dockstore-training/data/ref/ref_hg37_chr20.fa.fai",
+  "testBWA.BWA_align.ref_fasta_bwt": "/Users/louisecabansay/dockstore-training/data/ref/ref_hg37_chr20.fa.bwt"
+}
