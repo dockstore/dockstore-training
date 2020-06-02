@@ -1,14 +1,16 @@
 #############################################################
-# Dockerfile to build a sample tool container for BAMStats
+# Dockerfile to build a sample container for BWA
 #############################################################
 
 # Set the base image to Ubuntu
 FROM ubuntu:18.04
 
-# File Author / Maintainer
+# Add file author/maintainer and contact info (optional)
 MAINTAINER Louise Cabansay <lcabansa@ucsc.edu>
 
-# Setup packages
+#set user you want to install packages as
 USER root
+
+# install packages you want available in container
 RUN apt update
 RUN apt install bwa
