@@ -1,0 +1,4 @@
+{
+  "samtools_flagstat.flagstat.input_sam": "/Users/louisecabansay/gitOrgs/dockstore-training/data/out_realigned_NA12878_chr20.sam",
+  "samtools_flagstat.flagstat.docker_image": "ee9527336e3f"
+}
