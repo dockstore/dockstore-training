@@ -1,15 +1,16 @@
 version 1.0
 
-workflow testBWA {
-    call BWA_align
+workflow align_reads {
+    call BWA_Align
 
     output{
-        File output_sam = BWA_align.output_sam
+        File output_sam = BWA_Align.output_sam
     }
 }
 
-task BWA_align {
+task BWA_Align {
     input {
+        String sample_name
         String docker_image
         String bwa_opt
         Int threads
@@ -22,8 +23,9 @@ task BWA_align {
         File ref_fasta_sa
         File read1_fastq
         File read2_fastq
-        String output_sam
     }
+
+    String output_sam = "${sample_name}" + ".sam"
 
     command {
         bwa mem ${bwa_opt} ${threads} ${ref_fasta} ${read1_fastq} ${read2_fastq} > ${output_sam}
