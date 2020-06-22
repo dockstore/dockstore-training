@@ -27,6 +27,8 @@ RUN wget https://github.com/samtools/samtools/releases/download/1.10/samtools-1.
 	./configure --prefix $(pwd) && \
 	make
 
+COPY ./flagstat.sh /usr/local/bin
+
 # add the path to the samtools directory to environment PATH
 # needed so the executables can be found when running 'samtools' at command prompt
 ENV PATH="/usr/src/samtools-1.10:${PATH}"
