@@ -14,3 +14,6 @@ USER root
 # install packages you want available in container
 RUN apt update
 RUN apt install bwa
+
+COPY bwa_align.sh /usr/local/bin/
+
