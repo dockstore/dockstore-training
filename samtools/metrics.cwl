@@ -51,23 +51,11 @@ inputs:
 #      prefix: --analysis-sam
     doc: SAM file to analyze.
 
-  output_file_name:
-    type: string?
-    inputBinding:
-#      prefix: --output-file-name
-      position: 2
-    default: "results_sam_flagstat_metrics.txt"
-    doc: Output file name.
-
-  docker_image:
-    type: string
-    doc: Docker image to use.
-
 outputs:
   flagstat_metrics:
     type: File
     outputBinding:
-      glob: $(inputs.output_file_name)
+      glob: "*.metrics"
     doc: Metrics on the input SAM file.
 
 baseCommand: [flagstat.sh]

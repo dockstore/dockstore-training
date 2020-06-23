@@ -42,6 +42,18 @@ requirements:
     ramMin: 1024
     outdirMin: 100000
 
+  # Make sure the index files are in the same place
+  # so BWA can find them
+  InitialWorkDirRequirement:
+    listing:
+      - $(inputs.ref_fasta)
+      - $(inputs.ref_fasta_fai)
+      - $(inputs.ref_fasta_amb)
+      - $(inputs.ref_fasta_ann)
+      - $(inputs.ref_fasta_bwt)
+      - $(inputs.ref_fasta_pac)
+      - $(inputs.ref_fasta_sa)
+
 inputs:
   sample_name:
     type: string
@@ -65,7 +77,6 @@ inputs:
     type: File
     inputBinding:
       position: 4
-    secondaryFiles: [".bwt", ".sa", ".ann", ".pac", ".amb"]
     doc: Genome reference fasta file.
 
   ref_fasta_fai:
