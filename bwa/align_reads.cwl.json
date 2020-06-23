@@ -17,7 +17,7 @@
   },
   "ref_fasta_fai": {
        "class": "File",
-       "path", "/Users/louisecabansay/gitOrgs/dockstore-training/data/ref/ref_hg37_chr20.fa.fai"
+       "path": "/Users/louisecabansay/gitOrgs/dockstore-training/data/ref/ref_hg37_chr20.fa.fai"
   },
   "ref_fasta_bwt": {
       "class": "File",
