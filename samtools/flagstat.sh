@@ -11,5 +11,6 @@ set -u
 set -o xtrace
 #to turn off echo do 'set +o xtrace'
 
- samtools flagstat ${1} > ${2}
+output_file_name=$(basename ${1} ".sam")
+samtools flagstat ${1} > $output_file_name.flagstat.metrics
 
