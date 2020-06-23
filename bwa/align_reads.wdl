@@ -8,6 +8,7 @@ workflow align_reads {
     }
 }
 
+#create index in workflow, maybe as optional
 task BWA_Align {
     input {
         String sample_name

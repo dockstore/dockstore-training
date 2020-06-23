@@ -13,6 +13,7 @@ task Flagstat {
         String docker_image
         File input_sam
     }
+
     String sample_name = basename(input_sam, ".sam") + ".flagstat.metrics"
 
     command {

@@ -12,5 +12,6 @@ MAINTAINER Louise Cabansay <lcabansa@ucsc.edu>
 USER root
 
 # install packages you want available in container
+# https://www.howtoinstall.me/ubuntu/18-04/bwa/
 RUN apt update
 RUN apt install bwa
