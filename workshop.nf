@@ -1,22 +1,22 @@
 #!/usr/bin/env nextflow
 
-params.test1 = '/Users/natalieperez/gitOrgs/dockstore-training/data/ref/ref_hg37_chr20.fa'
-params.test2 = '/Users/natalieperez/gitOrgs/dockstore-training/data/NA12878_chr20_ds_r1.fq'
-params.test3 = '/Users/natalieperez/gitOrgs/dockstore-training/data/NA12878_chr20_ds_r2.fq'
+ref_fasta = file(params.ref_fasta)
+read1_fastq = file(params.read1_fastq)
+read2_fastq = file(params.read2_fastq)
 
 process BWA_Align {
 
     input:
-    path 'ref_fasta' from params.test1
-    path 'read1_fastq' from params.test2
-    path 'read2_fastq' from params.test3
+    file ref_fasta from ref_fasta
+    file read1_fastq from read1_fastq
+    file read2_fastq from read2_fastq
 
     output:
     file 'NA12878_chr20_ds.sam' into bwa_result
 
     """
-    bwa index ref_fasta
-    bwa mem ${params.bwa_opt} ${params.threads} ref_fasta read1_fastq read2_fastq > 'NA12878_chr20_ds.sam'
+    bwa index ${ref_fasta}
+    bwa mem ${params.bwa_opt} ${params.threads} ${ref_fasta} ${read1_fastq} ${read2_fastq} > 'NA12878_chr20_ds.sam'
     """
 }
 
