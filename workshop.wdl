@@ -1,6 +1,10 @@
 version 1.0
 
-# define workflow and specify what tasks the workflow will call, order dependent
+#This will be multi-task workflow example used in the training workshop.
+#Workflow consists of two tasks, one using bwa for alignment, the other using samtools flagstat.
+#Each task has also been separated out into individual workflows, see bwa and samtools directories.
+
+# define workflow and specify what tasks the workflow will call
 workflow align_and_metrics {
     # *note: at workflow call level, specify inputs shared by multiple files or those that are outputs from other tasks
     call BWA_Align
