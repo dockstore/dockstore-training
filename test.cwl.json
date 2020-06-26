@@ -1,7 +1,6 @@
 {
   "sample_name": "NA12878_chr20_ds",
-  "bwa_opt": "-M -t",
-  "threads": "4",
+  "bwa_opt": "-M -t 4",
   "read1_fastq": {
       "class": "File",
       "path": "/Users/louisecabansay/gitOrgs/dockstore-training/data/NA12878_chr20_ds_r1.fq"
@@ -16,7 +15,7 @@
   },
   "ref_fasta_fai": {
        "class": "File",
-       "path", "/Users/louisecabansay/gitOrgs/dockstore-training/data/ref/ref_hg37_chr20.fa.fai"
+       "path": "/Users/louisecabansay/gitOrgs/dockstore-training/data/ref/ref_hg37_chr20.fa.fai"
   },
   "ref_fasta_bwt": {
       "class": "File",

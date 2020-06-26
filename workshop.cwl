@@ -4,31 +4,41 @@ class: Workflow
 # label: A workflow that aligns a fasta file and provides statistics on the SAM file
 # doc: A workflow that aligns a fasta file and provides statistics on the SAM file
 
-s:author:
-  - class: s:Person
-    s:identifier: https://orcid.org/0000-0001-5173-4627
-    s:email: jshands@ucsc.edu
-    s:name: Walter Shands
-
-s:codeRepository: https://github.com/wshands/SnapTools/tree/feature/docker_cwl
-s:dateCreated: "2020-07-23"
-s:license: https://spdx.org/licenses/Apache-2.0
-
-s:keywords: edam:topic_0091 , edam:topic_0622
-s:programmingLanguage: Python
-
+#s:author:
+#  - class: s:Person
+#    s:identifier: https://orcid.org/0000-0001-5173-4627
+#    s:email: jshands@ucsc.edu
+#    s:name: Walter Shands
+#
+#s:codeRepository: https://github.com/wshands/SnapTools/tree/feature/docker_cwl
+#s:dateCreated: "2020-07-23"
+#s:license: https://spdx.org/licenses/Apache-2.0
+#
+#s:keywords: edam:topic_0091 , edam:topic_0622
+#s:programmingLanguage: Python
+#
+#$namespaces:
+#  s: https://schema.org/
+#  edam: http://edamontology.org/
+#
+#$schemas:
+#  - https://schema.org/docs/schema_org_rdfa.html
+#  - http://edamontology.org/EDAM_1.18.owl
 $namespaces:
-  s: https://schema.org/
-  edam: http://edamontology.org/
+#  s: https://schema.org/
+#  edam: http://edamontology.org/
+  dct: http://purl.org/dc/terms/
+  foaf: http://xmlns.com/foaf/0.1/
 
-$schemas:
-  - https://schema.org/docs/schema_org_rdfa.html
-  - http://edamontology.org/EDAM_1.18.owl
+dct:creator:
+  '@id':  https://orcid.org/0000-0001-5173-4627
+  foaf:name: Walter Shands
+  foaf:mbox: jshands@ucsc.edu
+
 
 inputs:
     sample_name: string
     bwa_opt: string
-    threads: int
     ref_fasta: File
     ref_fasta_fai: File
     ref_fasta_amb: File
@@ -54,7 +64,6 @@ steps:
     in:
       sample_name: sample_name
       bwa_opt: bwa_opt
-      threads: threads
       ref_fasta: ref_fasta
       ref_fasta_fai: ref_fasta_fai
       ref_fasta_amb: ref_fasta_amb
