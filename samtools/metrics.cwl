@@ -4,6 +4,7 @@ class: CommandLineTool
 id: metrics_tool
 label: metrics tool
 cwlVersion: v1.1
+doc: A tool that provides statistics for a SAM file
 
 $namespaces:
   dct: http://purl.org/dc/terms/
@@ -35,5 +36,5 @@ outputs:
     type: stdout
     doc: Metrics on the input SAM file.
 
-baseCommand: [flagstat.sh]
+baseCommand: [samtools, flagstat]
 

@@ -4,6 +4,8 @@ class: CommandLineTool
 id: align_tool
 label: align tool
 cwlVersion: v1.1
+doc: A workflow that aligns a pair of fasta files
+
 
 $namespaces:
   dct: http://purl.org/dc/terms/
