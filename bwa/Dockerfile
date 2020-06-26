@@ -14,4 +14,3 @@ USER root
 # install packages you want available in container
 RUN apt update
 RUN apt install bwa
-
