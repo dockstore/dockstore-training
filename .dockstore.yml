@@ -1,0 +1,12 @@
+version: 1.2
+workflows:
+  - name: alignment-example-cwl
+    subclass: cwl
+    primaryDescriptorPath: /workflow_examples/cwl/workshop.cwl
+    testParameterFiles:
+      -  /workflow_examples/cwl/test.cwl.json
+  - name: alignment-example-wdl
+    subclass: wdl
+    primaryDescriptorPath: /workflow_examples/wdl/workshop.wdl
+    testParameterFiles:
+      -  /workflow_examples/wdl/test.wdl.json
