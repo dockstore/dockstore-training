@@ -8,7 +8,6 @@
 
 version 1.0
 
-
 workflow metrics {
     call flagstat
     output{

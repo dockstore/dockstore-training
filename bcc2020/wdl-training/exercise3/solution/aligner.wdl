@@ -1,5 +1,5 @@
 ###############################################################################################
-# Exercise3 Example Solution
+# Exercise3
 # this workflow will...
 
 #launch locally with DockstoreCLI:
@@ -18,6 +18,7 @@ workflow align_reads {
 }
 # define the alignment task
 task bwa_align {
+
     # define the inputs parameters, actual values will be mapped from JSON
     input {
         String sample_name
@@ -33,7 +34,6 @@ task bwa_align {
         File read1_fastq
         File read2_fastq
     }
-
     #task variable used to make a filename (optional)
     String output_sam = "${sample_name}" + ".sam"
 

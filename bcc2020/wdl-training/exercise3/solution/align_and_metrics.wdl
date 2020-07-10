@@ -3,19 +3,26 @@
 # this workflow will...
 
 #launch locally with DockstoreCLI:
-#   dockstore workflow launch --local-entry aligner.wdl --json aligner.json
+#   dockstore workflow launch --local-entry align_and_metrics.wdl --json align_and_metrics.json
 ###############################################################################################
 
 version 1.0
 
-# define the align_reads workflow
-workflow align_reads {
+workflow align_and_metrics {
     call bwa_align
 
+    call flagstat {
+        input:
+            input_sam = bwa_align.output_sam
+    }
+
+    # define output for overall workflow
     output{
         File output_sam = bwa_align.output_sam
+        File output_metrics = flagstat.metrics
     }
 }
+
 # define the alignment task
 task bwa_align {
     # define the inputs parameters, actual values will be mapped from JSON
@@ -47,6 +54,24 @@ task bwa_align {
     }
     # define a parameterized runtime environment for this task
     # setting 'docker_image' here means the parameter needs to be defined in the JSON
+    runtime {
+        docker: docker_image
+    }
+}
+task flagstat {
+    input {
+        File input_sam
+        String docker_image
+    }
+    #basename function gets the samfile name
+    #'stats' variable will take the form <sample>.sam.metrics, used to name output file
+    String stats = basename(input_sam) + ".metrics"
+    command {
+        samtools flagstat ${input_sam} > ${stats}
+    }
+    output{
+        File metrics =  "${stats}"
+    }
     runtime {
         docker: docker_image
     }

@@ -1,7 +1,8 @@
 ##############################################################################################
 #launch locally with DockstoreCLI:
-#   dockstore workflow launch --local-entry HelloWorld.wdl --json hello.json
+#   dockstore workflow launch --local-entry HelloGoodbye.wdl --json HelloGoodbye.json
 ###############################################################################################
+
 version 1.0
 #define 'HelloGoodbye' workflow
 workflow HelloGoodbye {

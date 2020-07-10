@@ -1,4 +1,5 @@
 ###############################################################################################
+# Exercise3
 # this workflow will evaluate SAM file and generate statics about the alignment
 
 #launch locally with DockstoreCLI:

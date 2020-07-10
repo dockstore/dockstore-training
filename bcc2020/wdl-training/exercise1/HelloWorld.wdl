@@ -4,7 +4,9 @@
 #launch with cromwell:
 #   java -jar <path to cromwell jar>/cromwell-44.jar run HelloWorld.wdl --inputs hello.json
 ###############################################################################################
-version 1.0 #set wdl version
+#set wdl version
+version 1.0
+
 #add and name a workflow block
 workflow hello_world {
    call hello
