@@ -1,5 +1,4 @@
 version 1.0
-
 #This will be multi-task workflow example used in the training workshop.
 #Workflow consists of two tasks, one using bwa for alignment, the other using samtools flagstat.
 #Each task has also been separated out into individual workflows, see bwa and samtools directories.

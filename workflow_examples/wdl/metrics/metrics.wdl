@@ -1,8 +1,8 @@
+#dockstore workflow launch --local-entry metrics.wdl --json metrics.json
 version 1.0
 # this workflow will evaluate SAM file and generate statics about the alignment
 
 # define workflow and specify what tasks the workflow will call
-# since this is a single task workflow, the workflow block is technically optional
 workflow metrics {
     call Flagstat
 

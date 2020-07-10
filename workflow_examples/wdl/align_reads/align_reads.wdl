@@ -1,7 +1,6 @@
 version 1.0
 
 # define workflow and specify what tasks the workflow will call
-# since this is a single task workflow, the workflow block is technically optional
 workflow align_reads {
     call BWA_Align
 
