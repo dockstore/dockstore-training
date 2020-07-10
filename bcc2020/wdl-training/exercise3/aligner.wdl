@@ -41,10 +41,12 @@ task bwa_align {
     command {
         bwa mem ${bwa_opts} ${ref_fasta} ${read1_fastq} ${read2_fastq} > ${output_sam}
     }
+
     # define output, maps the sam file generated from alignment command
     output{
         File output_sam = "${output_sam}"
     }
+
     # define a parameterized runtime environment for this task
     # setting 'docker_image' here means the parameter needs to be defined in the JSON
     runtime {

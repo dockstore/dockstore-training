@@ -33,6 +33,6 @@ task flagstat {
     }
     # specify a container and any other runtime parameters to set up environment
     runtime {
-        docker: # set
+        docker: # set me
     }
 }

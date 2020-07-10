@@ -19,15 +19,19 @@ task flagstat {
         File input_sam
         String docker_image
     }
+
     #basename function gets the samfile name
     #'stats' variable will take the form <sample>.sam.metrics, used to name output file
     String stats = basename(input_sam) + ".metrics"
+
     command {
         samtools flagstat ${input_sam} > ${stats}
     }
+
     output{
         File metrics =  "${stats}"
     }
+
     runtime {
         docker: docker_image
     }

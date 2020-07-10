@@ -48,10 +48,12 @@ task bwa_align {
     command {
         bwa mem ${bwa_opts} ${ref_fasta} ${read1_fastq} ${read2_fastq} > ${output_sam}
     }
+
     # define output, maps the sam file generated from alignment command
     output{
         File output_sam = "${output_sam}"
     }
+
     # define a parameterized runtime environment for this task
     # setting 'docker_image' here means the parameter needs to be defined in the JSON
     runtime {
@@ -63,15 +65,18 @@ task flagstat {
         File input_sam
         String docker_image
     }
+
     #basename function gets the samfile name
     #'stats' variable will take the form <sample>.sam.metrics, used to name output file
     String stats = basename(input_sam) + ".metrics"
     command {
         samtools flagstat ${input_sam} > ${stats}
     }
+
     output{
         File metrics =  "${stats}"
     }
+
     runtime {
         docker: docker_image
     }

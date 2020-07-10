@@ -8,8 +8,8 @@
 
 version 1.0
 
-import "aligner.wdl"
-import "metrics.wdl"
+import "../aligner.wdl"
+import "../metrics.wdl"
 
 workflow align_and_metrics {
     call aligner.bwa_align
