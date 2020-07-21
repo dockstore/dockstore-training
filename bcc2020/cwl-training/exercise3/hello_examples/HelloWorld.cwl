@@ -1,7 +1,7 @@
 cwlVersion: v1.1
 
 ##############################################################################################
-# launch locally with DockstoreCLI:
+# launch locally with Dockstore CLI:
 #   dockstore workflow launch --local-entry HelloWorld.cwl --json hello.json
 ###############################################################################################
 
