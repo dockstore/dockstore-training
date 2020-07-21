@@ -1,5 +1,13 @@
 #!/usr/bin/env cwl-runner
 
+###############################################################################################
+# this tool will...
+
+# launch locally with Dockstore CLI:
+#   dockstore tool launch --local-entry hello.cwl --json hello.json
+###############################################################################################
+
+
 cwlVersion: v1.1
 class: CommandLineTool
 
