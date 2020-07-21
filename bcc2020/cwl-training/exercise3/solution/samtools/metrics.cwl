@@ -1,5 +1,14 @@
 #!/usr/bin/env cwl-runner
 
+
+###############################################################################################
+# Exercise3 Example Solution
+# this tool will...
+
+# launch locally with Dockstore CLI:
+#   dockstore tool launch --local-entry metrics.cwl --json metrics.cwl.json
+###############################################################################################
+
 class: CommandLineTool
 id: metrics_tool
 label: metrics tool

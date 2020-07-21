@@ -1,5 +1,13 @@
 #!/usr/bin/env cwl-runner
 
+###############################################################################################
+# Exercise3 Example Solution
+# this tool will...
+
+# launch locally with Dockstore CLI:
+#   dockstore tool launch --local-entry align.cwl --json align.cwl.json
+###############################################################################################
+#
 # CWL documents are written in YAML and/or JSON.
 # The cwlVersion field indicates the version of the CWL spec used by the document.
 # The class field indicates this document describes a command line tool.

@@ -1,3 +1,11 @@
+###############################################################################################
+# Exercise3 Example Solution
+# this workflow will...
+
+# launch locally with Dockstore CLI:
+#   dockstore workflow launch --local-entry align_and_metrics.cwl --json align_and_metrics.cwl.json
+###############################################################################################
+#
 cwlVersion: v1.1
 
 # See documentation here https://www.commonwl.org/user_guide/
