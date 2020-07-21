@@ -13,8 +13,8 @@ requirements:
         entry: |-
           #!/bin/bash
           greeting="$(inputs.greeting.path)"
-          cat \${greeting} > goodbye.txt
-          echo See you later! >> goodbye.txt
+          cat \${greeting} > Goodbye.txt
+          echo See you later! >> Goodbye.txt
 
 inputs:
   greeting:
@@ -26,6 +26,6 @@ outputs:
   outFile:
     type: File
     outputBinding:
-      glob: goodbye.txt
+      glob: Goodbye.txt
     doc: Output from echo and cat commands
 
