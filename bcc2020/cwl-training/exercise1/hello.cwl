@@ -11,8 +11,8 @@ requirements:
     listing:
       - entryname: hello.sh
         entry: |-
-          #! /bin/bash
-          myName="\$(inputs.myName)"
+          #!/bin/bash
+          myName="$(inputs.myName.path)"
           echo Hello World! > Hello.txt
           cat \${myName} >> Hello.txt
 
