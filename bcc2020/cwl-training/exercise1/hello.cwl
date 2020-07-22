@@ -2,7 +2,7 @@
 
 ###############################################################################################
 # Exercise1 Example Solution
-# this tool will...
+# this tool will output two strings to a file named Hello.txt
 
 # launch locally with Dockstore CLI:
 #   dockstore tool launch --local-entry hello.cwl --json hello.json

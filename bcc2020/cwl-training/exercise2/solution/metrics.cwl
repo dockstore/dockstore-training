@@ -3,7 +3,7 @@
 
 ###############################################################################################
 # Exercise3 Example Solution
-# this tool will...
+# this tool will run samtools flagstat on an input file
 
 # launch locally with Dockstore CLI:
 #   dockstore tool launch --local-entry metrics.cwl --json metrics.cwl.json
